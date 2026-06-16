@@ -160,13 +160,19 @@ fruits.pop();
 
 21. Inspect `fruits` as you run each line of code one at a time.
     1. Does `push` add to the front or back of an array?
-        * answer: 
+        * answer: back
     2. Does `pop` remove from the front or back of an array?
-        * answer: 
+        * answer: back
 22. Write code to add "kiwi" to `fruits` _without_ using `push`.
-    * answer: 
+    * ```js
+      const fruits = ["watermelon", "grape", "cranberry"];
+      fruits[3] = "kiwi";
+      fruits.push("strawberry");
+      fruits.pop();
+      fruits.pop();
+      ```
 23. Why might a developer prefer to use `push` or `pop` to mutate an array?
-    * answer: 
+    * answer: it's fast
 
 ## Nest an array inside an array
 
@@ -184,19 +190,19 @@ const grid = [
 ```
 
 24. What does `grid.length` evaluate to?
-    * answer: 
+    * answer: 4
 25. What does `grid[0]` evaluate to?
-    * answer: 
+    * answer: ["X", "-", "O"]
 26. What does `grid[0].length` evaluate to?
-    * answer: 
+    * answer: 3
 27. What does `grid[0][1]` evaluate to?
-    * answer: 
+    * answer: "-"
 28. What does `grid[3][0]` evaluate to?
-    * answer: 
+    * answer: "O"
 29. Write code to assign the value "O" to index 1 of `grid[2]`.
-    * answer: 
+    * answer: `gird[2][1] = "O`
 30. Write code to add a new row `["-", "-", "-"]` to the end of `grid`.
-    * answer: 
+    * answer: `grid.push(["-", "-", "-"])`
 
 ## Nest a loop inside a loop
 
@@ -211,9 +217,9 @@ for (let i = 0; i < grid.length; i++) {
 ```
 
 31. What are the different values of `i` in the **outer** loop?
-    * answer: 
+    * answer: 0, 1, 2, 3
 32. What are the different values of `j` in the **inner** loop?
-    * answer: 
+    * answer: 0, 1, 2
 33. Run the snippet above and examine the output. How would you describe
     the relationship between the outer and inner loops?
-    * answer: 
+    * answer: the inner loop runs entirely for each itteration of the outer loop
