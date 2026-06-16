@@ -22,12 +22,16 @@ const numbers = [3, 2, 1, 1, 0];
 | Element | 3   | 2   | 1   | 1   | 0   |
 
 1. What **element** is at index 1 of the array?
-2. **Bracket notation** is used to access an individual element of an array. For example,
+    * answer: 2
+3. **Bracket notation** is used to access an individual element of an array. For example,
    `numbers[2]` refers to the element at index 2 of `numbers`. How do you access the
    element at index 0 of `numbers`?
-3. What is the value of `numbers[4]`?
-4. The **length** of an array refers to how many elements it contains.
+    * answer: number[0]
+4. What is the value of `numbers[4]`?
+    * answer: 0
+5. The **length** of an array refers to how many elements it contains.
    At what index is the last element of an array with length 50?
+    * answer: 49
 
 ## Access characters of a string
 
@@ -42,8 +46,11 @@ const word = "penguin";
 | Element | p   | e   | n   | g   | u   | i   | n   |
 
 5. Which character is at index 3 of `word`?
+    * answer: g
 6. What is the value of `word[0]`?
+    * answer: p
 7. At what index is the character "i"?
+    * answer: 5
 
 ## Modify array elements
 
@@ -56,8 +63,11 @@ numbers[0] = 8;
 
 8. `numbers[0] = 8` assigns the value 8 to index 0 of the array `numbers`.
    How would you assign the value 15 to index 3 of an array named `foo`?
+    * answer: foo[3] = 15;
 9. What is the final value of `numbers`?
+    * answer: [8, 2, 1, 1, 0]
 10. What happens to the original value of `numbers[0]`?
+    * answer: it is changed to 8
 
 We can use a loop to populate an initially-empty array, as follows.
 
@@ -69,10 +79,19 @@ for (let i = 0; i < 10; i++) {
 ```
 
 11. What will the array `badgers` contain after the loop runs?
+    * answer: ["badger", "badger", "badger", "badger", "badger", "badger", "badger", "badger", "badger", "badger"]
 12. What is the final length of `badgers`?
+    * answer: 10
 13. How would you modify the code so that `badgers` is initialized with 2000 strings?
+    * ```js
+      const badgers = []
+      for (let i = 0; i < 2000; i++) {
+         badgers[i] = "badger";
+      }
+      ```
 14. Why would a developer want to use a loop to initialize an array instead of
     **hard-coding** it?
+    * answer: it's faster
 
 ## Iterate through array indexes
 
@@ -86,9 +105,25 @@ while (i < numbers.length) {
 ```
 
 15. How many times does the while loop run?
+    * answer: 5
 16. What does the variable `i` represent?
+    * answer: an index in the array `numbers`
 17. How would you modify the code to print the _elements_ of the array?
+    * ```js
+      const numbers = [0, 1, 1, 2, 3];
+      let i = 0;
+      while (i < numbers.length) {
+        console.log("numbers[i]:", numbers[i]);
+        i += 1;
+      }
+      ```
 18. Rewrite the snippet to use a `for` loop instead.
+    * ```js
+      const numbers = [0, 1, 1, 2, 3];
+      for (let i = 0; i < numbers.length; i++) {
+         console.log("i:", i);
+      }
+      ```
 
 ## Iterate through array elements
 
@@ -102,8 +137,11 @@ for (const number of numbers) {
 ```
 
 19. What variable is used to represent each element of the array?
+    * answer: number
 20. In what situation would a developer _not_ be able to use `for..of` to iterate
     through an array?
+    1. if the developer didn't want to loop through every item in the array;
+    2. if the developer tried to change element values within the loop
 
 > [!TIP]
 >
@@ -122,9 +160,13 @@ fruits.pop();
 
 21. Inspect `fruits` as you run each line of code one at a time.
     1. Does `push` add to the front or back of an array?
+        * answer: 
     2. Does `pop` remove from the front or back of an array?
+        * answer: 
 22. Write code to add "kiwi" to `fruits` _without_ using `push`.
+    * answer: 
 23. Why might a developer prefer to use `push` or `pop` to mutate an array?
+    * answer: 
 
 ## Nest an array inside an array
 
@@ -142,12 +184,19 @@ const grid = [
 ```
 
 24. What does `grid.length` evaluate to?
+    * answer: 
 25. What does `grid[0]` evaluate to?
+    * answer: 
 26. What does `grid[0].length` evaluate to?
+    * answer: 
 27. What does `grid[0][1]` evaluate to?
+    * answer: 
 28. What does `grid[3][0]` evaluate to?
+    * answer: 
 29. Write code to assign the value "O" to index 1 of `grid[2]`.
+    * answer: 
 30. Write code to add a new row `["-", "-", "-"]` to the end of `grid`.
+    * answer: 
 
 ## Nest a loop inside a loop
 
@@ -162,6 +211,9 @@ for (let i = 0; i < grid.length; i++) {
 ```
 
 31. What are the different values of `i` in the **outer** loop?
+    * answer: 
 32. What are the different values of `j` in the **inner** loop?
+    * answer: 
 33. Run the snippet above and examine the output. How would you describe
     the relationship between the outer and inner loops?
+    * answer: 
